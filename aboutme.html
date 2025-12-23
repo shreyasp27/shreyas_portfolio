@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Display&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="media/logos/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="media/logos/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="media/logos/favicon-16x16.png">
+        <title>About Me </title>
+        <link rel="stylesheet" href="aboutme.css">
+    </head>
+<body>
+    
+    <header class="banner">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Shreyas Puttaraju</a>
+            </div>
+            
+            <!-- Hamburger menu checkbox and label -->
+            <input type="checkbox" id="menuToggle" class="menuToggle">
+            <label for="menuToggle" class="nav-toggle">
+                <span class="hamburger">&#9776;</span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+               
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="punchline" id="punchline">
+        <div class="punchline-content">
+            
+            <h1>SHREYAS PUTTARAJU</h1>
+            <h3>VISUAL STORYTELLER</h3>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="profile-section">
+        <img src="media/photos/ALT01081.JPG" alt="Shreyas Puttaraju" class="profile-photo">
+        </div>
+        <div class="description-section">
+        <h1>ABOUT ME</h1>
+        <p>I'm Shreyas Puttaraju, an AI Engineer specializing in the application of Generative AI and Machine Learning to solve complex business challenges. My experience spans developing innovative AI solutions, from spearheading rapid proof-of-concept applications using Azure OpenAI at Jewelers Mutual Group to engineering sophisticated multi-agent systems with LangChain and AWS Bedrock at PeritusHub.</p>
+        <p>My technical expertise lies in leveraging Large Language Models (LLMs), advanced prompt engineering, Python, and cloud platforms (Azure, AWS) to build impactful tools. I focus on enhancing automation, optimizing workflows, and driving efficiency, whether through AI-driven document processing (extraction, summarization, analysis) or pioneering novel agentic architectures for conversational AI.</p>
+        <p>During my time at H-E-B, I integrated computer vision with LLMs (Azure OpenAI, GPT-3.5-Turbo) via LangChain to extract product attributes from images, delivering measurable improvements. This experience, along with designing ETL pipelines, CI/CD processes, and robust evaluation frameworks, highlights my ability to manage the end-to-end development lifecycle of AI systems.</p>
+        <p>Driven by a passion for building practical and scalable AI solutions, I excel at translating complex requirements into functional applications. My goal is to continue pushing the boundaries of generative AI, creating tools and systems that deliver significant value and streamline operations across diverse industries.</p>
+      </div>
+    </div>
+    
+    <!-- Add this section below your existing container -->
+<div class="photography-journey">
+    <div class="journey-description">
+        <h2>My Photography Journey</h2>
+        <p>Photography, for me, is not just a hobby; it's a form of expression, a way to capture the transient beauty of the world. As a beginner in this art form, I find myself drawn towards the raw realism of street, urban, and nature photography. Each frame I capture is a learning experience, teaching me to see the world through different perspectives.</p>
+
+        <p> My journey in photography is a quest to understand and depict the intricate tapestry of life around us. Street and urban photography allow me to capture the unscripted moments of everyday life, while nature photography is an exploration into the serene and untouched aspects of the environment. This hobby offers me a creative outlet outside my technical profession, balancing my life with artistry and imagination.</p>
+           
+        <p> Through my lens, I aim to tell stories, encapsulate emotions, and freeze moments in time. As I continue to explore this passion, I am eager to refine my skills, develop my unique style, and contribute my vision to the rich and diverse world of photography.</p>
+    </div>
+    <div class="journey-image">
+        <!-- Ensure the path to your image is correct -->
+        <img src="media/photos/pg.png" alt="Photography Journey" class="framed-photo">
+    </div>
+</div>
+
+<!-- Add this section below your previous container -->
+<div class="data-science-journey">
+    <div class="journey-image">
+    <!-- Ensure the path to your image is correct -->
+    <img src="media/photos/ds.png" alt="Data Science Journey" class="framed-photo">
+    </div>
+    <div class="journey-description">
+    <h2>My Data Science Journey</h2>
+    <p>My professional path as an AI and Data Scientist has been a blend of innovation, collaboration, and continuous learning across diverse environments.</p>
+    <p>Early explorations at H-E-B involved integrating computer vision with LLMs for complex data extraction, while my volunteer work with Change The Present focused on leveraging prompt engineering and Python for content automation. These foundational experiences paved the way for tackling more intricate challenges.</p>
+    <p>Subsequently, at PeritusHub, I delved into advanced AI architectures, pioneering a multi-agent system using LangChain and AWS Bedrock and building robust supporting infrastructure. Most recently, at Jewelers Mutual Group, I've focused on rapidly deploying practical Generative AI applications using Azure OpenAI, developing tools to enhance automation and decision-making, supported by rigorous evaluation frameworks.</p>
+    <p>Each role has been instrumental in deepening my expertise in Generative AI, cloud platforms, and end-to-end system development, solidifying my commitment to applying cutting-edge AI to solve real-world business problems.</p>
+    </div>
+</div>
+
+
+<section id="LetsTalk" class="lets-talk-section">
+    <div class="lets-talk-content">
+        <h2>Let's Talk</h2>
+        <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+        <form action="" method="POST" class="contact-form"  data-netlify="true">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+
+    <div id="social-links" class="social-links-small">
+        <a href="mailto:shreyas2797@gmail.com" target="_blank">
+            <img src="media/logos/gmail.webp" alt="Gmail">
+            <span>Gmail</span>
+        </a>
+        <a href="https://www.linkedin.com/in/shreyas-puttaraju/" target="_blank">
+            <img src="media/logos/linkedin-logo-transparent.png" style="background-color: white;" alt="LinkedIn">
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://www.instagram.com/_shreyasp__" target="_blank">
+            <img src="media/logos/insta.webp" alt="Instagram">
+            <span>Instagram</span>
+        </a>
+        <a href="https://github.com/shreyasp27" target="_blank" >
+            <img src="media/logos/GitHub-cat-logo.jpg" alt="GitHub">
+            <span>GitHub</span>
+        </a>
+        <a href="media/resume/Shreyas_Puttaraju_Resume.pdf" target="_blank" >
+            <img src="media/logos/resume-icon-png-1.png" alt="Resume">
+            <span>Resume</span>
+        </a>
+    </div>
+
+    <div class="social-links">
+        <a href="mailto:your-shreyas2797@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/shreyas-puttaraju/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/_shreyasp__" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/shreyasp27" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="media/resume/Shreyas_Puttaraju_Resume.pdf" target="_blank" title="Resume"><i class="fas fa-file-pdf"></i></a>
+    </div>
+    
+    
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    var mouseTimeout;
+    var scrollToTopBtn = document.getElementById('social-links');
+
+    // Initially hide the button
+    scrollToTopBtn.style.display = 'none';
+
+    // Function to show the button
+    function showScrollToTopButton() {
+        scrollToTopBtn.style.display = 'block'; // Show the button
+        // Clear any existing timeout
+        clearTimeout(mouseTimeout);
+        // Set a new timeout to hide the button after 3 seconds
+        mouseTimeout = setTimeout(function() {
+            scrollToTopBtn.style.display = 'none';
+        }, 5000); // 3000 milliseconds = 3 seconds
+    }
+
+    // Event listener for mouse movement
+    document.addEventListener('mousemove', function() {
+        showScrollToTopButton();
+    });
+});
+
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Display&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="media/logos/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="media/logos/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="media/logos/favicon-16x16.png">
+        <title>Photography Portfolio</title>
+        <link rel="stylesheet" href="photography.css">
+    </head>
+<body>
+    <div id="preloader">
+        <div id="loadingText">Photography Portfolio Loading...</div>
+        <div id="loadingBarContainer">
+            <div id="loadingBar"></div>
+        </div>
+    </div>
+    <header class="banner">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Shreyas Puttaraju</a>
+            </div>
+            
+            <!-- Hamburger menu checkbox and label -->
+            <input type="checkbox" id="menuToggle" class="menuToggle">
+            <label for="menuToggle" class="nav-toggle">
+                <span class="hamburger">&#9776;</span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutme.html">ABOUT ME</a></li>
+                <li><a href="#" onclick="openModal('contact-modal')">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="footer"></div>
+
+    <div id="contact-modal" class="skill-modal">
+        <div class="modal-content">
+            <h3 class="modal-heading">Contact Me</h3>
+            <div class="contact-links">
+                <a href="mailto:your-shreyas2797@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i> Gmail</a>
+                <a href="https://www.linkedin.com/in/shreyas-puttaraju/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/_shreyasp__" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://github.com/shreyasp27" target="_blank" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                <a href="media/resume/Shreyas_Puttaraju_Resume.pdf" target="_blank" title="Resume"><i class="fas fa-file-pdf"></i> Resume</a>
+            </div>
+        </div>
+    </div>
+    
+    <button id="scrollToTopBtn" title="Go to top">
+        <img src= "media/logos/arb.png" alt="Arrow">
+    </button>
+
+    <!-- Punchline -->
+    <section class="punchline" id="Hello-there">
+        <div class="punchline-content">
+            
+            <h3>URBAN  &nbsp;&nbsp;STREET&nbsp;&nbsp;  NATURE</h3>
+            <h1>Moments in Focus: The Art of Seeing</h1>
+        </div>
+    </section>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="#Hello-there" id="menu-hello-there">Hello!</a></li>
+            <li><a href="#Gallery" id="menu-gallery">Gallery</a></li>
+            <li><a href="#Favs" id="menu-favs">Best Shots</a></li>
+            <li><a href="#About-me" id="menu-about-me">Introduction</a></li>
+            <li><a href="#LetsTalk" id="menu-lets-talk">Let's Talk</a></li>
+        </ul>
+    </nav>
+    <div id="Gallery" class="photography" title="Click for details">
+ 
+        <h2   class="modal-headings">Picture Gallery</h2>
+<img src="media/gallery/1.jpg" alt="Image 1" class="image-item" data-full-size="media/gallery/1.jpg" data-title="Image 1" data-description="Camera Details"> 
+<img src="media/gallery/2.jpg" alt="Image 2" class="image-item" data-full-size="media/gallery/2.jpg" data-title="Image 2" data-description="Camera Details"> 
+<img src="media/gallery/3.jpg" alt="Image 3" class="image-item" data-full-size="media/gallery/3.jpg" data-title="Image 3" data-description="Camera Details"> 
+<img src="media/gallery/4.jpg" alt="Image 4" class="image-item" data-full-size="media/gallery/4.jpg" data-title="Image 4" data-description="Camera Details"> 
+<img src="media/gallery/5.jpg" alt="Image 5" class="image-item" data-full-size="media/gallery/5.jpg" data-title="Image 5" data-description="Camera Details"> 
+<img src="media/gallery/6.jpg" alt="Image 6" class="image-item" data-full-size="media/gallery/6.jpg" data-title="Image 6" data-description="Camera Details"> 
+<img src="media/gallery/7.jpg" alt="Image 7" class="image-item" data-full-size="media/gallery/7.jpg" data-title="Image 7" data-description="Camera Details"> 
+<img src="media/gallery/8.jpg" alt="Image 8" class="image-item" data-full-size="media/gallery/8.jpg" data-title="Image 8" data-description="Camera Details"> 
+<img src="media/gallery/9.jpg" alt="Image 9" class="image-item" data-full-size="media/gallery/9.jpg" data-title="Image 9" data-description="Camera Details"> 
+<img src="media/gallery/10.jpg" alt="Image 10" class="image-item" data-full-size="media/gallery/10.jpg" data-title="Image 10" data-description="Camera Details"> 
+<img src="media/gallery/11.jpg" alt="Image 11" class="image-item" data-full-size="media/gallery/11.jpg" data-title="Image 11" data-description="Camera Details"> 
+<img src="media/gallery/12.jpg" alt="Image 12" class="image-item" data-full-size="media/gallery/12.jpg" data-title="Image 12" data-description="Camera Details"> 
+<img src="media/gallery/13.jpg" alt="Image 13" class="image-item" data-full-size="media/gallery/13.jpg" data-title="Image 13" data-description="Camera Details"> 
+<img src="media/gallery/14.jpg" alt="Image 14" class="image-item" data-full-size="media/gallery/14.jpg" data-title="Image 14" data-description="Camera Details"> 
+<img src="media/gallery/15.jpg" alt="Image 15" class="image-item" data-full-size="media/gallery/15.jpg" data-title="Image 15" data-description="Camera Details"> 
+<img src="media/gallery/16.jpg" alt="Image 16" class="image-item" data-full-size="media/gallery/16.jpg" data-title="Image 16" data-description="Camera Details"> 
+<img src="media/gallery/17.jpg" alt="Image 17" class="image-item" data-full-size="media/gallery/17.jpg" data-title="Image 17" data-description="Camera Details"> 
+<img src="media/gallery/18.jpg" alt="Image 18" class="image-item" data-full-size="media/gallery/18.jpg" data-title="Image 18" data-description="Camera Details"> 
+<img src="media/gallery/19.jpg" alt="Image 19" class="image-item" data-full-size="media/gallery/19.jpg" data-title="Image 19" data-description="Camera Details"> 
+<img src="media/gallery/20.jpg" alt="Image 20" class="image-item" data-full-size="media/gallery/20.jpg" data-title="Image 20" data-description="Camera Details"> 
+<img src="media/gallery/21.jpg" alt="Image 21" class="image-item" data-full-size="media/gallery/21.jpg" data-title="Image 21" data-description="Camera Details"> 
+<img src="media/gallery/22.jpg" alt="Image 22" class="image-item" data-full-size="media/gallery/22.jpg" data-title="Image 22" data-description="Camera Details"> 
+<img src="media/gallery/23.jpg" alt="Image 23" class="image-item" data-full-size="media/gallery/23.jpg" data-title="Image 23" data-description="Camera Details"> 
+<img src="media/gallery/24.jpg" alt="Image 24" class="image-item" data-full-size="media/gallery/24.jpg" data-title="Image 24" data-description="Camera Details"> 
+<img src="media/gallery/25.jpg" alt="Image 25" class="image-item" data-full-size="media/gallery/25.jpg" data-title="Image 25" data-description="Camera Details"> 
+<img src="media/gallery/26.jpg" alt="Image 26" class="image-item" data-full-size="media/gallery/26.jpg" data-title="Image 26" data-description="Camera Details"> 
+<img src="media/gallery/27.jpg" alt="Image 27" class="image-item" data-full-size="media/gallery/27.jpg" data-title="Image 27" data-description="Camera Details"> 
+<img src="media/gallery/28.jpg" alt="Image 28" class="image-item" data-full-size="media/gallery/28.jpg" data-title="Image 28" data-description="Camera Details"> 
+
+
+        </div>
+    </div>
+    <div class="modal-container">
+        <div class="modal-contentg">
+            <span class="close-modalg">&times;</span>
+            <img class="full-size-image">
+            <div class="image-info">
+                <h4 class="image-title"></h4>
+                <p class="image-description"></p>
+                <p class="image-exif"></p> <!-- Element for EXIF data -->
+            </div>
+        </div>
+    </div>
+    <div>
+    <div id="Favs" class="favs-slideshow">
+        <h2 class="section-title">My Best Shots</h2> 
+        <div class="slide">
+            <div class="slide-text">
+                <p>Please note: All the images currently displayed on this page are temporary placeholders for testing purposes. Official images will be updated shortly.</p>
+                
+            </div>
+            <img src="media/gallery/1.jpg" alt="Image 1" class="slide-image">
+        </div>
+        <div class="slide">
+            <div class="slide-text">
+                <p>Please note: All the images currently displayed on this page are temporary placeholders for testing purposes. Official images will be updated shortly.</p>
+                
+            </div>
+            <img src="media/gallery/2.jpg" alt="Image 1" class="slide-image">
+        </div>
+        <div class="slide">
+            <div class="slide-text">
+                <p>Please note: All the images currently displayed on this page are temporary placeholders for testing purposes. Official images will be updated shortly.</p>
+                
+            </div>
+            <img src="media/gallery/3.jpg" alt="Image 1" class="slide-image">
+        </div>
+        <div class="slide">
+            <div class="slide-text">
+                <p>Please note: All the images currently displayed on this page  are temporary placeholders for testing purposes. Official images will be updated shortly.</p>
+        
+            </div>
+            <img src="media/gallery/4.jpg" alt="Image 1" class="slide-image">
+        </div>
+        <div class="slide">
+            <div class="slide-text">
+                <p>Please note: All the images currently displayed on this page are temporary placeholders for testing purposes. Official images will be updated shortly.</p>
+                
+            </div>
+            <img src="media/gallery/18.jpg" alt="Image 1" class="slide-image">
+        </div>
+    </div>
+</div>
+    <section id="About-me" class="about-me-section">
+        <div class="about-me-content">
+            <h1>Shreyas Puttaraju</h1>
+            <img src="media/photos/DSC_0248-01.jpg" alt="Shreyas Puttaraju" class="profile-image">
+            <a href="https://www.instagram.com/_shreyasp__"  target="_blank" class="insta-button">View My Instagram →</a>
+            <p>Aspiring Photographer passionate about capturing the essence of urban life, street scenes, and the natural world. With a keen eye for detail and a growing portfolio showcasing my journey in street, urban, and nature photography, I am dedicated to exploring the beauty and diversity of the world through my lens. My work reflects a unique perspective on everyday life, aiming to tell compelling stories and evoke emotions through vivid and thought-provoking images. Currently seeking opportunities to collaborate and learn in the photography community, I am excited to embrace new challenges and experiences that will enhance my skills and artistic expression. </p>
+        </div>
+    </section>
+
+
+    <section id="LetsTalk" class="lets-talk-section">
+        <div class="lets-talk-content">
+            <h2>Let's Talk</h2>
+            <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+            <form action="" method="POST" class="contact-form" data-netlify="true">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <div class="social-links">
+        <a href="mailto:your-shreyas2797@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/shreyas-puttaraju/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/_shreyasp__" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/shreyasp27" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="media/resume/Shreyas_Puttaraju_Resume.pdf" target="_blank" title="Resume"><i class="fas fa-file-pdf"></i></a>
+    </div>
+    
+ 
+    
+   <script>
+
+
+
+
+
+
+    $(document).ready(function() {
+    var menuItems = $('.menu a'); // Get all the menu items
+    
+    // Function to check which section is in view and add the 'active-menu-item' class
+    function makeActive() {
+        // Get current scroll position plus some offset
+        var currentScroll = $(window).scrollTop() + 50; // Adjust the 50px offset as needed
+
+        // Loop through section links
+        menuItems.each(function() {
+            var section = $($(this).attr('href'));
+            var sectionTop = section.offset().top;
+            var sectionHeight = section.outerHeight();
+            if (sectionTop <= currentScroll && (sectionTop + sectionHeight) > currentScroll) {
+                menuItems.removeClass('active-menu-item');
+                $(this).addClass('active-menu-item');
+            }
+        });
+    }
+
+    // Initial call
+    makeActive();
+
+    // Call makeActive function when user scrolls
+    $(window).scroll(function() {
+        makeActive();
+    });
+});
+
+document.getElementById("scrollToTopBtn").addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+$(document).ready(function() {
+    // Function to create the masonry grid
+    function createMasonryGrid() {
+        var $container = $('.photography');
+        $container.masonry({
+            itemSelector: '.image-item',
+            columnWidth: '.image-item',
+            gutter: 20,
+        });
+    }
+
+    // Call the function after all images are loaded
+    $(window).on('load', function() {
+        createMasonryGrid();
+    });
+});
+
+
+let exifData = {};
+
+fetch('selected_exif_data.json')
+    .then(response => response.json())
+    .then(data => {
+        exifData = data;
+    })
+    .catch(error => console.error('Error fetching EXIF data:', error));
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.image-item');
+    const modalContainer = document.querySelector('.modal-container');
+    const fullSizeImage = document.querySelector('.full-size-image');
+    const imageTitle = document.querySelector('.image-title');
+    const imageDescription = document.querySelector('.image-description');
+    const imageExif = document.querySelector('.image-exif');
+    const closeModal = document.querySelector('.close-modalg');
+
+    function formatExifValue(value) {
+        const parts = value.split('/');
+        return parts.length === 2 ? (parseInt(parts[0]) / parseInt(parts[1])).toFixed(2) : value;
+    }
+
+    images.forEach(image => {
+        image.addEventListener('click', function () {
+            const imageName = image.getAttribute('data-full-size').split('/').pop();
+            const title = image.getAttribute('data-title');
+            const description = image.getAttribute('data-description');
+            const exif = exifData[imageName];
+
+            fullSizeImage.src = image.getAttribute('data-full-size');
+            imageTitle.textContent = title;
+            imageDescription.textContent = description;
+
+            if (exif) {
+                imageExif.innerHTML = `
+                    <p>Make: ${exif.Make}</p>
+                    <p>Model: ${exif.Model}</p>
+                    <p>Focal Length: ${formatExifValue(exif.FocalLength)}mm</p>
+                    <p>F Stop: ${formatExifValue(exif.FNumber)}</p>
+                    <p>ISO: ${exif.ISOSpeedRatings}</p>
+                    <p>Exposure: ${exif.ExposureMode === 0 ? 'Auto' : exif.ExposureMode}</p>
+                `;
+            } else {
+                imageExif.textContent = 'EXIF data not available';
+            }
+
+            modalContainer.style.display = 'flex';
+        });
+    });
+
+    closeModal.addEventListener('click', () => modalContainer.style.display = 'none');
+    modalContainer.addEventListener('click', event => {
+        if (event.target === modalContainer) {
+            modalContainer.style.display = 'none';
+        }
+    });
+});
+
+
+let slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+
+function nextSlide() {
+    // Remove classes from all slides
+    slides.forEach((slide) => {
+        slide.classList.remove('slide-active', 'slide-exit');
+    });
+
+    // Add 'slide-exit' to the current slide
+    slides[currentSlide].classList.add('slide-exit');
+
+    // Calculate the next slide index
+    let nextSlideIndex = (currentSlide + 1) % slides.length;
+
+    // Timeout to remove 'slide-exit' and add 'slide-active' to the next slide
+    // Allows for the exit animation of the current slide to complete
+    setTimeout(() => {
+        slides[currentSlide].classList.remove('slide-exit');
+        slides[nextSlideIndex].classList.add('slide-active');
+    }, 1000); // The timeout should match the transition duration in CSS
+
+    // Update the current slide index
+    currentSlide = nextSlideIndex;
+}
+
+
+// Start the slideshow
+function startSlideshow() {
+    // Initially, make the first slide visible
+    slides[currentSlide].classList.add('slide-active');
+    
+    // Set an interval to go to the next slide every 5 seconds
+    setInterval(nextSlide, 7000);
+}
+
+// Start the slideshow when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', startSlideshow);
+
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = 'flex'; // Show the modal
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('skill-modal')) {
+        event.target.style.display = 'none'; // Hide the modal
+    }
+};
+
+
+
+
+
+document.addEventListener('scroll', function() {
+    var aboutMeSection = document.getElementById('About-me');
+    var image = aboutMeSection.querySelector('.profile-image');
+
+    var sectionPos = aboutMeSection.getBoundingClientRect().top;
+    var screenPos = window.innerHeight / 2;
+
+    if (sectionPos < screenPos) {
+        // When the section is in the viewport, scale the image
+        image.style.transform = 'scale(1.0)';
+    } else {
+        // When the section is not in the viewport, reset the scale
+        image.style.transform = 'scale(0.8)';
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    let ticking = false;
+    const menu = document.querySelector('.menu');
+
+    function syncHorizontalScroll() {
+        const totalScrollHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollY = window.scrollY;
+        const maxScrollLeft = menu.scrollWidth - menu.clientWidth;
+
+        const scrollX = (scrollY / totalScrollHeight) * maxScrollLeft;
+        menu.scrollLeft = scrollX;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                syncHorizontalScroll();
+                ticking = false;
+            });
+
+            ticking = true;
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var mouseTimeout;
+    var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // Initially hide the button
+    scrollToTopBtn.style.display = 'none';
+
+    // Function to show the button
+    function showScrollToTopButton() {
+        scrollToTopBtn.style.display = 'block'; // Show the button
+        // Clear any existing timeout
+        clearTimeout(mouseTimeout);
+        // Set a new timeout to hide the button after 3 seconds
+        mouseTimeout = setTimeout(function() {
+            scrollToTopBtn.style.display = 'none';
+        }, 5000); // 3000 milliseconds = 3 seconds
+    }
+
+    // Event listener for mouse movement
+    document.addEventListener('mousemove', function() {
+        showScrollToTopButton();
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('slide-up');
+            } else {
+                entry.target.classList.remove('slide-up');
+            }
+        });
+    }, {
+        threshold: 0.0 // Adjust this value based on when you want the animation to trigger
+    });
+
+    document.querySelectorAll('.about-me-content h1, .about-me-content h2, .photography, .section-title, #Gallery, .lets-talk-section, .punchline-content h1,.punchline-content h3  ').forEach(el => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    var preloader = document.getElementById('preloader');
+    var loadingBar = document.getElementById('loadingBar');
+
+    function updateLoadingBar(totalMedia, loadedMedia) {
+        var percentage = (loadedMedia / totalMedia) * 100;
+        loadingBar.style.width = percentage + '%';
+
+        if (loadedMedia >= totalMedia) {
+            setTimeout(() => { preloader.style.display = 'none'; }, 500); // Adds a slight delay for a smoother transition
+        }
+    }
+
+    function checkMedia() {
+        var images = Array.from(document.images);
+        var videos = Array.from(document.getElementsByTagName('video'));
+        var totalMedia = images.length + videos.length;
+        var loadedMedia = 0;
+
+        images.forEach(img => {
+            if (img.complete) {
+                loadedMedia++;
+            } else {
+                img.onload = img.onerror = function() {
+                    loadedMedia++;
+                    updateLoadingBar(totalMedia, loadedMedia);
+                };
+            }
+        });
+
+        videos.forEach(video => {
+            if (video.readyState > 3) {
+                loadedMedia++;
+            } else {
+                video.onloadeddata = function() {
+                    loadedMedia++;
+                    updateLoadingBar(totalMedia, loadedMedia);
+                };
+            }
+        });
+
+        // Initial check if all media are already loaded
+        updateLoadingBar(totalMedia, loadedMedia);
+    }
+
+    // Check for media loading periodically
+    // This interval can be adjusted or replaced with a more sophisticated observer/listener for dynamic content
+    var checkInterval = setInterval(checkMedia, 1000);
+
+    // Stop checking after a reasonable timeout to avoid indefinite checking
+    // Adjust the timeout as needed
+    setTimeout(function() {
+        clearInterval(checkInterval);
+    }, 20000);
+});
+
+function adjustLayout() {
+    // Adjust Footer Height
+    var menuHeight = document.querySelector('.menu').offsetHeight + (window.innerHeight * 0.04);
+    var footer = document.querySelector('.footer');
+    if (footer) {
+        footer.style.setProperty('--footer-height', menuHeight + 'px');
+    }
+
+    // Adjust Section Padding
+    var bannerHeight = document.querySelector('.banner').offsetHeight + (window.innerHeight * 0.025);
+    var sectionIds = ['#About-me', '#Gallery', '#Favs', '#LetsTalk'];
+    sectionIds.forEach(function(id) {
+        var section = document.querySelector(id);
+        if (section) {
+            section.style.paddingTop = bannerHeight + 'px';
+        }
+    });
+}
+
+// Run the function on load and on resize
+window.onload = adjustLayout;
+window.onresize = adjustLayout;
+
+
+   </script>
+
+
+</body>
+</html>

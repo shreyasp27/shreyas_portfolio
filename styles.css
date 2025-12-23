@@ -1,0 +1,1818 @@
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+    font-family: "Google Sans Display",Arial,Helvetica,sans-serif;
+    overflow-x: hidden;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    max-width: 100vw;
+}
+
+body {
+    font-family: "Google Sans Display",Arial,Helvetica,sans-serif;
+    
+    color: #060606;
+    background-color: #F0F2F5;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    max-width: 100vw;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.banner {
+    background-color: #e0e3e6;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: fit-content;
+    justify-content: center;
+    z-index: 1011;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.logo {
+    display: inline-block;
+    margin-left: 1%;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #060606;
+    font-size: 28px;
+    font-weight: lighter;
+    transition: color 0.3s;
+}
+
+.logo:hover {
+    background: linear-gradient(to right, #4548e6, #9d33db);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    margin-top: 5px;
+    padding: 0;
+    display: flex;
+    white-space: nowrap;
+    margin-right: 2%;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #060606;
+    font-size: 1.2em;
+    position: relative;
+    transition: font-size 0.3s, opacity 0.3s ease;
+    opacity: 1;
+    margin-right: 20px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 100%;
+    background-image: linear-gradient(to right, #e68645, #9d33db);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.nav-links a:hover::after {
+    opacity: 1;
+}
+
+.nav-links:hover a {
+    opacity: 0.5;
+}
+
+.nav-links a:hover {
+    font-size: 1.25em;
+    color: #000000;
+    background-color: inherit;
+    opacity: 1;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    
+}
+
+.menuToggle {
+    appearance: none;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+*,
+*::before,
+*::after {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: -moz-scrollbars-none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        margin-top: 0px;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #eee; 
+    }
+    
+    .nav-links li {
+        display: block;
+        text-align: center;
+        margin-left: 0px;
+    }
+    
+    #menuToggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+        border-top: 2px solid #ddd;
+    }
+
+    .nav-links li {
+        padding: 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-links a:hover {
+        background-color: #f8f8f8;
+    }
+}
+
+
+
+
+/*start of punchline*/
+.punchline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    color: #303030;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Prevents video from overflowing */
+    
+}
+
+
+
+.punchline-content {
+    font-size: 4vw; 
+    max-width: 70%;
+    padding: 2vw; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.punchline-content h1 {
+    font-size: 1.5em;
+    background-image: linear-gradient(to right, #2769e5 43%, #9d33db 63%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes the text transparent, showing the background */
+}
+
+.punchline-content p {
+    font-size: .5em;
+    
+}
+
+.animated-gradient {
+    background: linear-gradient(150deg, #71dfee,  #5489f4d2, #7704ba);
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    animation: shine 10s linear infinite;
+    text-shadow: none;
+}
+
+@keyframes shine {
+    0% { background-position: 100% 0; }
+    50% { background-position: 0% 0; }
+    100% { background-position: 100% 0; }
+}
+
+
+/* This will apply styles for screens that are 768px wide or less */
+@media screen and (max-width: 450px) {
+
+    .punchline {
+        width: 100vw;
+        
+    }
+    .punchline-content h1 {
+        font-size: 2.4em; /* Increase the font size for h1 */
+    }
+
+    .punchline-content p {
+        font-size: 1em; /* Increase the font size for p */
+    }
+
+    /* You might also want to increase the font-size of the .animated-gradient span if it's not increasing automatically with h1 */
+    .animated-gradient {
+        font-size: inherit; /* This will ensure it scales with the h1 font size */
+    }
+}
+
+
+/*end of punchline*/
+.menu {
+    position: fixed;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #f8f8f8;
+    border-radius: 30px;
+    padding: 10px 30px;
+    box-shadow: 0 4px 8px rgba(131, 131, 131, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: auto; 
+    transition: all 0.3s ease;
+    overflow-x: auto;
+    white-space: nowrap; /* Prevents text from wrapping */
+    height: fit-content;
+    z-index: 1011;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    margin: 0 10px;
+    flex-shrink: 0; /* Prevents the items from shrinking */
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgba(36, 35, 35, 0.74);
+    font-size: 1.25em;
+    padding: 5px 10px;
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.active-menu-item {
+    color: rgb(21, 21, 21) !important; 
+    transition: color 0.3s; 
+    background-image: linear-gradient(to right, #0059ff 43%, #c258ffe5 63%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    
+   
+}
+
+.active-menu-item::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Adjust based on your design */
+    left: 0;
+    width: 80%;
+    height: 2px; /* Height of the underline */
+    background: linear-gradient(to right, rgb(30, 27, 243), #8915e2); /* Gradient effect */
+    border-radius: 1px; /* Slight roundness on the underline */
+    bottom: 0;
+    margin-left: 10%;
+}
+
+.footer1 {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    padding: 10px; /* Optional: for some padding around the text */
+    width: auto; /* Optional: depends on the content size */
+    text-align: center;
+    z-index: 1012;
+}
+
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: -1%;
+    width: 100%;
+    height: var(--footer-height);  /* Adjust the height as needed */
+    background-color: #F0F2F5; /* Set your desired background color */
+    z-index: 1010; /* Ensure it stays above other content */
+}
+
+
+    @media screen and (max-width: 768px) {
+        .menu {
+            width: 100vw; /* Make sure the menu takes the full width of the viewport */
+            padding: 10px 0; /* Adjust padding as necessary */
+            box-sizing: border-box; /* Ensure padding is included in the width */
+            border-radius: 5px;
+            
+        }
+    
+        .menu ul {
+            min-width: 145vw; /* Set a minimum width to ensure scrollability */
+            transform: translateX(15%);
+            align-items: center;
+            
+        }
+    
+        .menu li {
+            margin: 0px; /* Adjust margins for small screens if necessary */
+            
+            
+        }
+    
+        .menu a {
+            font-size: 1em; /* Adjust font size for small screens if necessary */
+            
+        }
+
+        
+
+    }
+    
+
+
+    .about-me-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /* Full viewport height */
+        
+    }
+    
+    .about-me-content {
+        display: flex;
+        width: 100%;
+        max-width: 1250px; /* Max content width */
+        align-items: center; /* Vertically align content */
+        gap: 50px; /* Space between flex items */
+        justify-content: space-around; 
+        margin-top: -18vh;
+    }
+
+    .title-slider {
+        position: relative;
+        height: 40px; /* Fixed height to prevent layout shift */
+        overflow: hidden;
+        margin-bottom: 1em;
+    }
+    
+    .title-slider h2 {
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        line-height: 40px; 
+        text-align: start;
+        transform: translateY(100%);
+        opacity: 0; /* Start fully transparent */
+        transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+        color: rgb(89, 89, 89);
+        
+    }
+    
+    /* Active class for the current title */
+    .title-slider h2.active {
+        transform: translateY(0);
+        opacity: 1;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+    
+    /* Upcoming class for the title about to slide in */
+    .title-slider h2.upcoming {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    
+    /* Exiting class for the title moving out */
+    .title-slider h2.exiting {
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+    
+    
+    .text-section {
+        flex: 1;
+        padding-right: 2em; /* Space between text and image */
+        text-align: left;
+    }
+    
+    .image-section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .about-me-content img {
+        width: 36.52em; /* Adjust the width as needed */
+        height: 24.34em; /* Adjust the height to make it square */
+        border-radius: 0; /* Remove the rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+        display: block; /* Make it a block element */
+        margin-left: auto; /* Center align the image */
+        margin-right: auto; /* Center align the image */
+        border-radius: 25px;
+        transform: scale(0.8); /* Start at 0.8 scale */
+        transition: transform 01s ease-in-out;
+        margin-bottom: 1.5em;
+    }
+    
+    .about-me-content h1 {
+        font-size: 3.5em;
+        background-image: linear-gradient(to right, #2769e5 43%, #9d33db 63%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent; /* Makes the text transparent, showing the background */    
+    }
+    
+    
+    
+    .about-me-content p {
+        font-size: 1em;
+        
+        line-height: 1.6;
+        margin-bottom: 1.5em;
+    }
+    
+        
+    @media (max-width: 768px) {
+        .about-me-content {
+            flex-direction: column; /* Stack on smaller screens */
+            align-items: center;
+            max-width: 85vw;
+        }
+    
+        .text-section, .image-section {
+            padding: 0;
+            text-align: center;
+        }
+    
+        
+        
+        .title-slider h2 {
+            text-align: center;  
+        }
+
+        
+
+    }
+    
+
+.viewproject-button,
+.insta-button,
+.linkedin-button {
+    display: inline-block;
+    background-color: transparent; /* Black background */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    border-radius: 20px; /* Rounded corners */
+    text-decoration: none;
+    font-size: 16px; /* Adjust as needed */
+    transition: all 0.3s ease;
+    border: 2px solid  #e6e6e6; /* Placeholder for border, maintains layout */
+    outline: none; /* Remove outline */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    margin: 0 5px; /* Add a small gap between buttons */
+    position: relative; /* Required for absolute positioning of pseudo-elements */
+    overflow: hidden; /* Ensures the pseudo-element does not leak outside the border-radius */
+    margin-bottom: 1.2em;
+    z-index: 11;
+}
+
+
+
+.linkedin-button::after {
+    content: '';
+    position: absolute;
+    top: 0; /* Align with the border edge */
+    left: 0; /* Align with the border edge */
+    width: 100%; /* Same width as the button */
+    height: 100%; /* Same height as the button */
+    border-radius: 20px ; /* Match the button's border-radius */
+    z-index: -1;
+    background-image: linear-gradient(90deg, #303bd4, #0a21f3);
+    background-clip: border-box;
+    pointer-events: none;  /* Ensures click events pass through to the button element */
+}
+
+.insta-button::after {
+    content: '';
+    position: absolute;
+    top: 0; /* Align with the border edge */
+    left: 0; /* Align with the border edge */
+    width: 100%; /* Same width as the button */
+    height: 100%; /* Same height as the button */
+    border-radius: 20px; /* Match the button's border-radius */
+    z-index: -1;
+    background-image: linear-gradient(90deg, #e97529, #9b24e0);
+    background-clip: border-box;
+    pointer-events: none; 
+}
+
+.viewproject-button::after {
+    content: '';
+    position: absolute;
+    top: 0; /* Align with the border edge */
+    left: 0; /* Align with the border edge */
+    width: 100%; /* Same width as the button */
+    height: 100%; /* Same height as the button */
+    border-radius: 20px; /* Match the button's border-radius */
+    z-index: -1;
+    background-image: linear-gradient(90deg, #050301, #050505);
+    background-clip: border-box;
+    pointer-events: none; 
+}
+
+
+.viewproject-button:hover,
+.viewproject-button:focus,
+.insta-button:hover,
+.insta-button:focus,
+.linkedin-button:hover,
+.linkedin-button:focus {
+    background-color: #e6e6e6; /* Slightly lighter black for hover/focus */
+    /* Slightly lighter border for hover/focus */
+    text-decoration: none; /* No underline on hover/focus */
+}
+
+.viewproject-button .fa-arrow-right,
+.insta-button .fa-arrow-right,
+.linkedin-button .fa-arrow-right {
+    margin-left: 5px; /* Space between text and arrow icon */
+    
+}
+
+.viewproject-button::before,
+.insta-button::before,
+.linkedin-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start from the left outside of the button */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: all 0.3s ease; /* Smooth transition for the gradient */
+    z-index: 0; /* Place it below the text */
+    
+}
+
+
+
+.viewproject-button::before,
+.insta-button:hover::before,
+.linkedin-button:hover::before {
+    left: 100%; /* Move the gradient to the right */
+}
+
+
+.viewproject-button span ,
+.insta-button span ,
+.linkedin-button span {
+    position: relative; /* To ensure the text is above the gradient */
+    z-index: 1;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    
+}
+
+.viewproject-button:hover span,
+.insta-button:hover span,
+.linkedin-button:hover span {
+    transform: scale(1.1); /* Scale the text */
+}
+ 
+/* Styles for larger screens remain unchanged */
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 768px) {
+    .insta-button,
+    .linkedin-button {
+        padding: 8px 15px; /* Slightly smaller padding */
+        font-size: 14px; /* Smaller font size */
+        border-radius: 10px; /* Slightly smaller border-radius */
+        margin: 0 3px; /* Less gap between buttons */
+        margin-bottom: 1em; /* Adjusted bottom margin for stack */
+        max-width: 50vw;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .insta-button .fa-arrow-right,
+    .linkedin-button .fa-arrow-right {
+        margin-left: 4px; /* Smaller space between text and icon */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .insta-button,
+    .linkedin-button {
+        font-size: 12px; /* Even smaller font size for very small screens */
+        padding: 5px 10px; /* Reduced padding */
+        border-radius: 10px; /* Reduced border-radius */
+        margin: 0 2px; /* Reduce margin to fit smaller screens */
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* You might want to remove the hover scale effect on very small screens
+       since it can lead to a cramped appearance. */
+    .insta-button:hover span,
+    .linkedin-button:hover span {
+        transform: none;
+    }
+}
+
+/* Optional: If the buttons still take too much space, you can make them block elements 
+   to stack them vertically on the smallest screens. */
+@media screen and (max-width: 360px) {
+    .insta-button,
+    .linkedin-button {
+        display: block; /* Each button takes full width */
+        width: 100%; /* Maximize the width */
+        margin: 8px 0; /* Add margin between stacked buttons */
+    }
+}
+
+
+.experience-section {
+    background: none;
+    text-align: left;
+    color: #060606;
+    
+    margin-top: 20vh;
+    height: auto;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 80vw;
+    
+
+}
+
+
+.experience-section h3 {
+    font-size: 3.5em;
+    background-image: linear-gradient(to right, #2769e5 43%, #9d33db 63%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Makes the text transparent, showing the background */
+    margin-bottom: 0.25em;
+    margin: 10px 0;
+    text-align: center;
+}
+
+
+.work-experience,
+.research-experience {
+    margin-bottom: 0.25em;
+}
+
+.work-item{
+    border-bottom: 1px solid #333; 
+}
+
+
+
+
+.work-item,
+.research-item {
+    color: #060606; 
+    padding: 15px;
+    
+    
+}
+
+.work-item li,
+.research-item li {
+    margin-bottom: .25em; /* Increased gap between list items */
+    text-align: left;
+    
+}
+
+
+.work-item h4,
+.research-item h4 {
+    font-size: 1.5em;
+    margin-bottom: 0.25em;
+    font-weight: lighter;
+    
+}
+
+.work-item p,
+.research-item p {
+    
+    line-height: 1.5;
+    margin-bottom: 0.5em;
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+
+    .experience-section h3 {
+        font-size: 2.5em; /* Slightly smaller font size for headings */
+    }
+
+    .work-experience,
+    .research-experience {
+        margin-bottom: 0.5em; /* Adjust bottom margin */
+    }
+
+    .work-item{
+        border-bottom: 1px solid #333; 
+    }
+
+    .work-item,
+    .research-item {
+        padding: 10px; /* Adjust padding */
+        margin: 5px 0; /* Adjust margin */
+        
+    }
+
+    .work-item li,
+    .research-item li {
+        margin-bottom: 0.6em; /* Adjust the bottom margin for list items */
+    }
+
+    .work-item h4,
+    .research-item h4 {
+        font-size: 1.25em; /* Adjust font size for headings */
+    }
+
+    .work-item p,
+    .research-item p {
+        font-size: 1em; /* Adjust font size for paragraphs */
+        line-height: 1.3; /* Adjust line height for better readability */
+    }
+}
+
+@media screen and (max-height: 480px) {
+    
+
+    .experience-section h3 {
+        font-size: 2em; /* Slightly smaller font size for headings */
+    }
+
+    .work-experience,
+    .research-experience {
+        margin-bottom: 0.5em; /* Adjust bottom margin */
+    }
+
+    .work-item{
+        border-bottom: 1px solid #333; 
+    }
+
+    .work-item,
+    .research-item {
+        padding: 10px; /* Adjust padding */
+        margin: 5px 0; /* Adjust margin */
+        
+    }
+
+    .work-item li,
+    .research-item li {
+        margin-bottom: 0.6em; /* Adjust the bottom margin for list items */
+        font-size: 12px;
+    }
+
+    .work-item h4,
+    .research-item h4 {
+        font-size: 16px; /* Adjust font size for headings */
+    }
+
+    .work-item p,
+    .research-item p {
+        font-size: 12px; /* Adjust font size for paragraphs */
+        line-height: 1.3; /* Adjust line height for better readability */
+    }
+}
+
+
+.education-section {
+    text-align: center;
+    padding: 50px 0;
+    color: #060606; /* Adjust as needed */
+    margin-top: 0px;
+    height: auto;
+}
+
+.education-section h3 {
+    font-size: 3.5em;
+    background-image: linear-gradient(to right, #2769e5 43%, #9d33db 63%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1em;
+}
+
+
+.degree-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.degree {
+    width: calc(40% - 30px); 
+    
+}
+
+.education-image {
+    width: auto;
+    max-width: 280px;
+    max-height: 720px;
+    aspect-ratio: 3 / 4;
+    border-radius: 8px; /* Optional */
+    box-shadow: 0 4px 18px rgba(65, 65, 65, 0.914);
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+
+    .education-section h3 {
+        font-size: 2.5em; /* Smaller font size for heading */
+        margin-bottom: 0.5em; /* Adjust bottom margin */
+    }
+
+    .education-section h2 {
+        font-size: 1.5em; /* Smaller font size for subheading */
+        font-weight: lighter;
+    }
+
+    .degree-container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Reduce gap */
+    }
+
+    .degree {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+
+    .education-image {
+        width: 50%; /* Full width for image */
+        max-width: 50%; /* Ensure image doesn't exceed container width */
+        height: auto; /* Maintain aspect ratio */
+        transform: scale(1); /* No scaling needed for smaller screens */
+    }
+}
+
+@media screen and (max-height: 480px) {
+    
+
+    .education-section h3 {
+        font-size: 2.5em; /* Smaller font size for heading */
+        margin-bottom: 0.5em; /* Adjust bottom margin */
+    }
+
+    .education-section h2 {
+        font-size: 1.5em; /* Smaller font size for subheading */
+        font-weight: lighter;
+    }
+
+    .degree-container {
+        flex-direction: row; /* Stack items vertically */
+        gap: 10px; /* Reduce gap */
+    }
+
+    .degree {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 20px; /* Add bottom margin */
+    }
+
+    .education-image {
+        width: 50%; /* Full width for image */
+        max-width: 50%; /* Ensure image doesn't exceed container width */
+        height: auto; /* Maintain aspect ratio */
+        transform: scale(1); /* No scaling needed for smaller screens */
+    }
+}
+
+
+li {
+    list-style-type: none; /* Removes bullet points */
+}
+
+
+
+
+
+.projects-container {
+    
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* This will center the content vertically */
+    align-items: center;
+    margin: 0; /* Ensure there are no margins adding extra space */
+    margin-top: 5vh;
+    overflow-x: hidden;
+  }
+  
+ 
+  .title-error h3 {
+    font-size: 3.5em;
+    background-image: linear-gradient(to right, #2769e5 43%, #9d33db 63%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0; /* Remove margin to eliminate the gap */
+    padding: 0; /* Reset padding */
+    margin-bottom: .5em; 
+    text-align: center;
+    
+    
+  }
+  
+  
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 40px 20px;
+    height: fit-content;
+  }
+  
+  .arrow {
+    font-size: 3em;
+    cursor: pointer;
+    user-select: none;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    align-items: center;
+  }
+
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 60vw;
+    text-align: center;
+   
+  
+  }
+  
+  .project-title {
+    font-size: 2.5em;
+    
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+ 
+
+  .project-body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: flex-start;
+  }
+  
+  .project-content {
+    flex: 0 0 60%;
+    text-align: left;
+    line-height: 1.2;
+    margin-right: 20px;
+    font-size: 1.1em;
+
+  }
+
+  .project-description p,
+.project-description a {
+  margin-bottom: 20px; /* Adjust the value to create the desired gap */
+}
+
+/* Remove the margin from the last element to prevent extra space at the bottom */
+.project-description a:last-child {
+  margin-bottom: 0;
+}
+
+.project-description p:first-child {
+    margin-top: 20px;
+  }
+  
+  .project-image {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative; /* Needed for absolute positioning of pseudo-element */
+    overflow: visible; /* Set to visible to show the shadow outside the border */
+}
+
+.project-image::after {
+    content: '';
+    position: absolute;
+    top: 10px; /* Increase for larger shadow */
+    bottom: 10px; /* Increase for larger shadow */
+    left: 10px; /* Increase for larger shadow */
+    right: 10px; /* Increase for larger shadow */
+    border-radius: 15px; /* Slightly larger to create a 'shadow' effect */
+    background: linear-gradient(to right, #2769e5, #ac5eda);
+    z-index: -1;
+    filter: blur(15px); /* Increase the blur for a thicker shadow */
+    transform: scale(1.1); /* Scale up the shadow slightly */
+}
+
+.project-image img {
+    border-radius: 10px; /* Ensure the image has the same border-radius as its container */
+    position: relative; /* Position relative to sit on top of the pseudo-element */
+    z-index: 1; /* Ensure the image is above the pseudo-element */
+}
+
+
+  
+  .project-image img {
+    max-width: 95%;
+    max-height: 65%;
+    
+  }
+  
+  
+
+  @media (max-width: 768px) {
+    .project-body {
+      flex-direction: column;
+    }
+  
+    .project-content, .project-image {
+      width: 100%;
+      flex-basis: auto;
+    }
+
+    .project-image, .project-image::after {
+        top: 15px;
+        bottom: 25px;
+        
+    }
+  
+    .project-image img {
+      object-fit: scale-down;
+      
+      
+    }
+    .projects-container {
+        padding-top: 20%; /* Increase padding for smaller screens */
+    }
+
+    .projects-container h3 {
+        margin-bottom: 1.5em; /* Adjust bottom margin for smaller screens */
+    }
+
+    .project-title{
+        font-size: 24px;
+    }
+
+    .project-description p{
+      font-size: 16px;
+    }
+
+    .title-error h3{
+        font-size: 2.5em;
+    }
+
+    .viewproject-button{
+        bottom: 7px;
+        left: -4%;
+        top: 5px;
+    }
+
+  }
+  
+
+  @media (max-height: 480px) {
+    .project-body {
+      flex-direction: row;
+      height: fit-content;
+      
+    }
+  
+    .project-content, .project-image {
+      width: 50%;
+      flex-basis: auto;
+    }
+
+    .project-image, .project-image::after {
+        top: 15px;
+        bottom: 25px;
+        
+    }
+  
+    .project-image img {
+      object-fit: scale-down;
+      
+      
+    }
+    .projects-container {
+        padding-top: 20%; /* Increase padding for smaller screens */
+    }
+
+    .projects-container h3 {
+        margin-bottom: .7em; /* Adjust bottom margin for smaller screens */
+    }
+
+    .project-title{
+        font-size: 18px;
+    }
+
+    .project-description p{
+      font-size: 12px;
+    }
+
+    .title-error h3{
+        font-size: 2em;
+    }
+
+    .project-content{
+        font-size: 12px;
+    }
+
+    .viewproject-button{
+        bottom: 7px;
+        left: -4%;
+        top: 5px;
+    }
+
+  }
+  
+
+
+.skills-container {
+    text-align: center; /* Center-align the title */
+    max-width: 100vw;
+}
+
+.skills-title {
+    margin-bottom: 0.5em;
+    font-size: 3.5em;
+    background-image: linear-gradient(to right, #2769e5 43%, #a553d4 63%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    
+}
+
+.skills-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 35px; /* Adjust the gap between boxes as needed */
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+}
+
+.skill-category {
+    background-color: whitesmoke; /* Match this with your background */
+    cursor: pointer;
+    transition: transform 0.3s, border 0.3s;
+    aspect-ratio: 1 / 1;  /* Makes it a square */
+    border: thick solid transparent; /* Set a default border */
+    border-radius: 25px; 
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.skill-category::after {
+    content: '';
+    position: absolute;
+    top: -5px; /* Align with the border */
+    bottom: -5px; /* Align with the border */
+    left: -5px; /* Align with the border */
+    right: -5px; /* Align with the border */
+    border-radius: 15px; /* Match the border-radius of the skill category */
+    background: linear-gradient(to right, #2769e5, #9d33db);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0; /* Start fully transparent */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for the hover effect */
+    transform: scale(0.95); /* Start slightly scaled down */
+  }
+  
+  .skill-category:hover::after {
+    opacity: 1; /* Fully visible on hover */
+    transform: scale(1.05); /* Scale up on hover */
+  }
+  
+
+.skill-content {
+    text-align: center;
+    margin-top: 1em;
+    justify-content: center;
+}
+
+.skill-content img {
+    max-width: 200px; /* Adjust as needed */
+    max-height: 200px; /* Maintain aspect ratio */
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+}
+
+@media screen and (max-width: 768px) {
+    .skills-container {
+        padding-top: 25%; /* Reduced padding for smaller screens */
+    }
+
+    .skills-title {
+        font-size: 2.5em; /* Smaller font size for the title */
+        margin-bottom: 1em; /* Adjusted margin-bottom */
+    }
+
+    .skills-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+        width: 70vw; /* Increase width to allow more space for items */
+        height: auto; /* Height auto for flexibility */
+        margin-bottom: 3%; /* Adjusted margin-bottom */
+        gap: 10px; /* Smaller gap between items */
+    }
+
+    .skill-category {
+        aspect-ratio: unset; /* Remove aspect ratio constraint for flexibility */
+        padding: 10px; /* Add some padding */
+    }
+
+    .skill-content img {
+        max-width: 150px; /* Smaller image size */
+        max-height: 150px; /* Maintain aspect ratio */
+        margin-top: 5%; /* Adjusted margin-top */
+    }
+}
+
+
+@media screen and (max-height: 480px) {
+    .skills-container {
+        padding-top: 10%; /* Reduced padding for smaller screens */
+    }
+
+    .skills-title {
+        font-size: 2em; /* Smaller font size for the title */
+        margin-bottom: 1em; /* Adjusted margin-bottom */
+    }
+
+    .skills-section {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Two columns for smaller screens */
+        width: 70vw; /* Increase width to allow more space for items */
+        height: auto; /* Height auto for flexibility */
+        margin-bottom: 3%; /* Adjusted margin-bottom */
+        gap: 10px; /* Smaller gap between items */
+    }
+
+    .skill-category {
+        aspect-ratio: unset; /* Remove aspect ratio constraint for flexibility */
+        padding: 10px; /* Add some padding */
+    }
+
+    .skill-content img {
+        max-width: 100px; /* Smaller image size */
+        max-height: 100px; /* Maintain aspect ratio */
+        margin-top: 5%; /* Adjusted margin-top */
+    }
+}
+
+/* CSS for closing the modal when clicking outside of the modal content */
+.skill-modal {
+    display: none; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1112;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-content {
+    background-color: rgba(241, 241, 241, 0.952);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    min-width: 50%;
+    width: auto;
+    height: fit-content;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    box-shadow: #0f0e0e;
+}
+
+.modal-heading {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+   
+}
+
+.modal-content ul {
+    list-style-type: none;
+    padding-left: 15%;
+    margin: 0;
+}
+
+.modal-content ul li {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 80%; /* Increase width to fit smaller screens better */
+        height: auto; /* Make height auto to contain its content */
+        padding: 10px; /* Adjust padding */
+        display: block; /* Stack elements instead of using grid */
+    }
+
+    .modal-heading {
+        font-size: 1.2em; /* Decrease font size for smaller screens */
+        margin-bottom: 15px; /* Adjust spacing */
+    }
+
+    .modal-content ul {
+        padding-left: 5%; /* Adjust padding for smaller screens */
+    }
+
+    .modal-content ul li {
+        font-size: 1em; /* Decrease font size for list items */
+    }
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 7.5%;
+    right: 3%;
+    z-index: 1109; 
+    background-color: transparent; 
+    border: none;
+    border-radius: 50%;
+    width: 40px; 
+    height: px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    padding: 0; /* Remove padding */
+    overflow: hidden; 
+}
+
+#scrollToTopBtn img {
+    width: 100%; /* Image will fill the button */
+    height: auto;
+    display: block; /* Remove default inline attributes */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #fff8f892;
+}
+
+@media screen and (max-width: 768px) {
+    #scrollToTopBtn {
+        bottom: 2%;
+        width: 35px;
+    }
+}
+@media screen and (max-height: 480px) {
+    #scrollToTopBtn {
+        bottom: 10%;
+        width: 30px;
+    }
+}
+
+
+#contact-modal .modal-content {
+    height: fit-content; /* Adjusts height to content or set a specific value */
+    max-height: 60%; 
+    width: auto;
+    min-width: 50%;
+    column-gap: 30%;
+    align-items: center; 
+    justify-content: center; 
+    padding: 25px; /* Add some padding */
+    display: flex; /* Use Flexbox */
+}
+
+#contact-modal .modal-heading {
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+.contact-links {
+    text-align: center; /* Center-align text */
+    font-size: 1.5em;
+   
+}
+
+.contact-links a {
+    display: flex; /* Use Flexbox for alignment inside the link */
+    align-items: center; /* Align icon and text */
+    margin: 10px;
+    color: #060606; /* Or your preferred color */
+    text-decoration: none;
+    margin-bottom: 25px;
+    transition: all 0.3s ease; 
+}
+
+.contact-links i {
+    margin-right: 8px;
+}
+
+.contact-links a:hover {
+    transform: scale(1.2); 
+    color: #060606; 
+    background-color: inherit; 
+    opacity: 1; 
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    #contact-modal .modal-content {
+        width: 70%; /* Use a higher percentage of width for smaller screens */
+        height: auto; /* Allow the height to adjust to content */
+        max-height: none; /* Remove the max-height restriction */
+        padding: 20px; /* Increase padding for better spacing */
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; /* Add gap between flex items */
+    }
+
+    #contact-modal .modal-heading {
+        font-size: 2em; /* Slightly smaller font size for the heading */
+      /* Adjust bottom margin */
+    }
+
+    .contact-links {
+        font-size: 1.2em; /* Adjust font size for the contact links */
+    }
+
+    .contact-links a {
+        margin: 8px 0; /* Adjust margin for links */
+        margin-bottom: 15px;
+    }
+
+    .contact-links i {
+        margin-right: 15px;
+        font-size: larger; /* Adjust right margin for icons */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contact-modal .modal-content {
+        width: 75%; /* Use almost full width for very small screens */
+        padding: 15px; /* Adjust padding */
+        gap: 10px; /* Reduce gap between flex items */
+    }
+
+    #contact-modal .modal-heading {
+        font-size: 1.5em; /* Even smaller font size for the heading */
+    }
+
+    .contact-links {
+        font-size: 1em; /* Smaller font size for the contact links */
+    }
+
+    .contact-links a:hover {
+        transform: none; /* Disable scaling on hover for very small screens */
+    }
+}
+
+
+.lets-talk-section {
+    padding: 50px 0;
+    text-align: center;
+    padding-top: 9%;
+    padding-bottom: 20px;
+}
+
+.lets-talk-content h2 {
+    font-size: 3.5em;
+    background-image: linear-gradient(to right, #2769e5 43%, #9d33db 63%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 1em;
+}
+
+.lets-talk-content p {
+    color: #060606; /* Lighter text for description */
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 4px solid #cfcfcf; /* Light grey border */
+    border-radius: 4px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical; /* Allows resizing the textarea vertically */
+}
+
+.submit-button {
+    background-color: #000000; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #464646e4;
+    color: #000000 /* Darker blue on hover */
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .lets-talk-section {
+        padding: 30px 0; /* Reduced padding */
+        
+    }
+
+    .lets-talk-content h2 {
+        font-size: 1.5em; /* Smaller font size for the heading */
+    }
+
+    .lets-talk-content p {
+        font-size: 1em; /* Smaller font size for the paragraph */
+        padding: 0 5%; /* Add padding on the sides for better text readability */
+    }
+
+    .contact-form {
+        padding: 0 5%; /* Add padding on the sides */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        padding: 10px; /* Reduced padding */
+        border: 2px solid #cfcfcf; /* Thinner border */
+        margin-bottom: 15px; /* Reduced spacing between form elements */
+    }
+
+    .contact-form textarea {
+        height: 120px; /* Adjust height for smaller screens */
+    }
+
+    .submit-button {
+        padding: 10px 15px; /* Adjust button padding */
+    }
+
+    .error-message {
+        margin-top: 10%; /* Adjust the top margin */
+        font-size: 1em; /* Smaller font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .lets-talk-content h2,
+    .lets-talk-content p {
+        padding: 0 10%; /* Increase padding on the sides for very small screens */
+    }
+
+    .submit-button {
+        width: 92vw; /* Make the button full width for better touch accessibility */
+        padding: 10px; /* Consistent padding */
+    }
+    .lets-talk-section {
+        width: 95vw;
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .lets-talk-content h2,
+    .lets-talk-content p {
+        padding: 0 10%; /* Increase padding on the sides for very small screens */
+    }
+
+    .submit-button {
+        width: 92vw; /* Make the button full width for better touch accessibility */
+        padding: 10px; /* Consistent padding */
+    }
+    .lets-talk-section {
+        width: 95vw;
+        height: 60vh;
+    }
+
+}
+
+.social-links {
+  text-align: center;
+  padding: 20px;
+  justify-content: center;
+  height: 5vh;
+  padding-bottom: 200px;
+  /* Additional styling as needed */
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent black background */
+  color: #2d2d2d; /* White icons */
+  width: 40px;
+  height: 40px;
+  line-height: 40px; /* Vertically center the icon */
+  align-items: center;
+  text-align: center;
+  font-size: 20px; /* Size of the icon */
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+
+.social-links i {
+  vertical-align: middle;
+  justify-content: center;
+}
+
+/* Base styles for buttons */
+.social-links a {
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+    overflow: hidden; /* Ensures the pseudo-element doesn't overflow the button */
+    /* Other common styles for buttons (e.g., padding, border, font) */
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    background-color: #ffffff; /* Lighter color for hover/focus */
+    text-decoration: none; /* No underline on hover/focus */
+    color: #000000 /* Darker blue on hover */
+}
+
+
+.social-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%; /* Start from the left outside of the button */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+    transition: all 0.3s ease; /* Smooth transition for the gradient */
+    z-index: 0; /* Place it below the text */
+}
+
+.social-links a:hover::before {
+    left: 100%; /* Move the gradient to the right */
+}
+
+.social-links a span {
+    position: relative; /* To ensure the text is above the gradient */
+    z-index: 1;
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.social-links a:hover span {
+    transform: scale(1.1); /* Scale the text */
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #060606; /* Assuming a black background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loadingText {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white; /* Text color */
+    text-align: center;
+}
+
+#loadingBarContainer {
+    width: 25vw;
+    height: 4px;
+    background-color: rgb(41, 41, 41); /* Color of the unloaded part */
+    position: relative;
+    overflow: hidden;
+}
+
+#loadingBar {
+    height: 4px;
+    background-color: rgb(255, 255, 255); /* Color of the loading part */
+    width: 0%; /* Initial width */
+    transition: width 2s ease; /* Smooth transition for the loading effect */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Luminance/glow effect */
+}
+
