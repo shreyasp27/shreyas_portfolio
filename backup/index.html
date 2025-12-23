@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans+Display&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="media/logos/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/logos/favicon-16x16.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="preloader">
+        <div id="loadingText">Work Portfolio Loading...</div>
+        <div id="loadingBarContainer">
+            <div id="loadingBar"></div>
+        </div>
+    </div>
+    <header class="banner">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Shreyas Puttaraju</a>
+            </div>
+
+            <!-- Hamburger menu checkbox and label -->
+            <input type="checkbox" id="menuToggle" class="menuToggle">
+            <label for="menuToggle" class="nav-toggle">
+                <span class="hamburger">&#9776;</span>
+            </label>
+
+            <ul class="nav-links">
+                <li><a href="photography.html">PHOTOGRAPHY</a></li>
+                <li><a href="aboutme.html">ABOUT ME</a></li>
+                <li><a href="#" onclick="openModal('contact-modal')">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="footer"></div>
+
+
+    <div id="contact-modal" class="skill-modal">
+        <div class="modal-content">
+            <h3 class="modal-heading">Contact Me</h3>
+            <div class="contact-links">
+                <a href="mailto:your-shreyas2797@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i> Gmail</a>
+                <a href="https://www.linkedin.com/in/shreyas-puttaraju/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.instagram.com/_shreyasp__" target="_blank" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://github.com/shreyasp27" target="_blank" title="GitHub"><i class="fab fa-github"></i> GitHub</a>
+                <a href="media/resume/Shreyas_Puttaraju_Resume.pdf" target="_blank" title="Resume"><i class="fas fa-file-pdf"></i> Resume</a>
+            </div>
+        </div>
+    </div>
+
+
+    <button id="scrollToTopBtn" title="Go to top">
+        <img src="media/logos/arb.png" alt="Arrow">
+    </button>
+
+
+    <section class="punchline" id="Hello-there">
+        <div class="punchline-content" id="fade-content">
+            <h1>From <span class="animated-gradient">Insight</span> To <span class="animated-gradient">Impact</span></h1>
+            <p>Propelling Innovation Using AI, Shaping Data into Insights.</p>
+        </div>
+    </section>
+
+
+    <nav class="menu">
+        <ul>
+            <li><a href="#Hello-there" id="menu-hello-there">Hello!</a></li>
+            <li><a href="#About-me" id="menu-about-me">Introduction</a></li>
+            <li><a href="#Projects" id="menu-projects">Projects</a></li>
+            <li><a href="#Skills" id="menu-skills">Skills</a></li>
+            <li><a href="#Experience" id="menu-experience">Experience</a></li>
+            <li><a href="#Education" id="menu-education">Education</a></li>
+            <li><a href="#LetsTalk" id="menu-lets-talk">Lets Talk</a></li>
+        </ul>
+    </nav>
+
+    <div class="footer1">
+        Last updated - March 2025
+    </div>
+
+
+    <section id="About-me" class="about-me-section">
+        <div class="about-me-content">
+            <div class="text-section">
+                <h1>Hi, I'm Shreyas</h1>
+                <div class="title-slider">
+                    <h2>AI Engineer</h2>
+                    <h2>Data Analyst</h2>
+                    <h2>Machine Learning Engineer</h2>
+                    <h2>Data Scientist</h2>
+
+                </div>
+                <p>With three years of experience, I excel in applying sophisticated methodologies across artificial intelligence, machine learning, and data analytics to create impactful solutions. My work includes designing scalable AI frameworks, such as multi-agent systems and Retrieval-Augmented Generation (RAG) integrations, and developing innovative tools for advanced document management and candidate scoring. Skilled in transforming complex data into actionable insights, I enhance decision-making and operational efficiency. My approach integrates technical precision with creative problem-solving, ensuring adaptability and leadership in technology-driven environments.</p>
+                <a href="https://www.linkedin.com/in/shreyas-puttaraju/" target="_blank" class="linkedin-button">View My LinkedIn →</a>
+                </div>
+            <div class="image-section">
+                <img src="media/photos/pic.jpg" alt="Shreyas Puttaraju" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <div id="Projects" class = "title-error">
+        <h3>Selected Projects</h3>
+    </div>
+    <div  class="projects-container">
+
+        <div class="carousel-container">
+          <!-- Left Arrow for navigation -->
+          <div class="arrow left" onclick="previousProject()">&#10094;</div>
+
+          <!-- Content Wrapper -->
+          <div class="content">
+
+            <!-- Project 1: Interactive Portfolio Website Using OpenAI LLM -->
+            <div class="project">
+                <h1 class="project-title">LLMOPs - LLMs In Production</h1>
+                <div class="project-body">
+                  <div class="project-content">
+                    <p>Conducted research to develop best practices for the operational aspects of Large Language Models, focusing on cost-efficiency, scalability, and performance optimization within LLMOps frameworks.</p>
+                    <div class="project-description">
+                      <p>Tools/Language: OpenAI LLM, Vector DB, Agents, Cloud Frameworks</p>
+                      <p>October 2023</p>
+                      <a href="media/projects/LLMOPS.pdf"  target="_blank" class="viewproject-button">View Project →</a>
+                    </div>
+                  </div>
+                  <div class="project-image">
+                    <img src="media/photos/LLMOPs.jpg" alt="Project Image" style="max-width:100%;height:auto;">
+                  </div>
+                </div>
+              </div>
+
+              <div class="project">
+                <h1 class="project-title">Retrieval-Augmented Generation (RAG) in Large Language Models </h1>
+                <div class="project-body">
+                  <div class="project-content">
+                    <p>This project has been focused on exploring the Retrieval-Augmented Generation (RAG) in large language models. </br>The mechanism, advantages, applications, and challenges of RAG, along with its potential future developments and impact on AI and machine learning, have been examined. This exploration is essential for understanding the evolving role of AI in various sectors.</p>
+                    <div class="project-description">
+                      <p>Tools/Language: Langchain, OpenAI LLM</p>
+                      <p>August 2023</p>
+                      <a href="media/projects/RAG IN LLMS.pdf"  target="_blank" class="viewproject-button">View Project →</a>
+                    </div>
+                  </div>
+                  <div class="project-image">
+                    <img src="media/photos/RAG.png" alt="Project Image" style="max-width:100%;height:auto;">
+                  </div>
+                </div>
+              </div>
+
+
+
+            <div class="project">
+                <h1 class="project-title">Interactive Portfolio Website Using OpenAI LLM</h1>
+                <div class="project-body">
+                  <div class="project-content">
+                    <p>Utilized OpenAI's Large Language Model (LLM), employing prompt engineering with no manual coding to create my portfolio.</br> Successfully built an interactive three-page portfolio website, showcasing the transformative potential of LLMs in practical applications.</p>
+                    <div class="project-description">
+                      <p>Tools/Language: OpenAI LLM</p>
+                      <p>July 2023</p>
+                      <a href="https://github.com/shreyasp27"  target="_blank" class="viewproject-button">View Project →</a>
+                    </div>
+                  </div>
+                  <div class="project-image">
+                    <img src="media/photos/project-1.png" alt="Project Image" style="max-width:100%;height:auto;">
+                  </div>
+                </div>
+              </div>
+
+
+           <!-- Project 2: Style Transfer Using Generative Adversarial Networks -->
+<div class="project">
+    <h1 class="project-title">Style Transfer Using Generative Adversarial Networks</h1>
+    <div class="project-body">
+      <div class="project-content">
+        <p>Demonstrated how GAN’s architecture can be used in style transfer. Showcased the generalizability and adaptability of CycleGAN.</br> Implemented image-to-image translation GAN using TensorFlow packages to generate artistic paintings from real-world photos.</p>
+        <div class="project-description">
+          <p>Tools/Language: TensorFlow, CycleGAN, GAN</p>
+          <p>June 2023</p>
+          <a href="media/projects/Style Transfer.pdf" target="_blank" class="viewproject-button">View Project →</a>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="media/photos/project-2.jpg" alt="Style Transfer GAN" style="max-width:100%;height:auto;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 3: Ensemble Methods in Machine Learning -->
+  <div class="project">
+    <h1 class="project-title">Ensemble Methods in Machine Learning</h1>
+    <div class="project-body">
+      <div class="project-content">
+        <p>Devised ensemble methods (ADA-Boost, Gradient Boost, and Extreme GB) with 98% accuracy.</br> Gained in-depth insights into various boosting and bagging algorithms.</p>
+        <div class="project-description">
+          <p>Tools/Language: ADA-Boost, Gradient Boost, Extreme GB</p>
+          <p>April 2022</p>
+          <a href="https://github.com/shreyasp27" target="_blank" class="viewproject-button">View Project →</a>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="media/photos/project-3.png" alt="Ensemble Methods in Machine Learning" style="max-width:100%;height:auto;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 4: Traffic Volume Prediction -->
+  <div class="project">
+    <h1 class="project-title">Traffic Volume Prediction</h1>
+    <div class="project-body">
+      <div class="project-content">
+        <p>Determined traffic volume of Minnesota through deep learning algorithms, including CNN, RNN, and LSTM. </br>Evaluated various deep neural network algorithms using Keras packages to provide accurate time series prediction.</p>
+        <div class="project-description">
+          <p>Tools/Language: Keras, CNN, RNN, LSTM</p>
+          <p>November 2022</p>
+          <a href="https://github.com/shreyasp27" target="_blank" class="viewproject-button">View Project →</a>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="media/photos/project-4.jpg" alt="Traffic Volume Prediction" style="max-width:100%;height:auto;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 5: Visualizing HR Data -->
+  <div class="project">
+    <h1 class="project-title">Visualizing HR Data</h1>
+    <div class="project-body">
+      <div class="project-content">
+        <p>Collaborated with a team to conduct data analysis on the HR dataset and create insightful visualizations.</br> Utilized Tableau and R to explore relations between employees' age, gender, department, and tenure in the workplace.</p>
+        <div class="project-description">
+          <p>Tools/Language: Tableau, R</p>
+          <p>June 2023</p>
+          <a href="https://github.com/shreyasp27" target="_blank" class="viewproject-button">View Project →</a>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="media/photos/project-5.jpg" alt="Visualizing HR Data" style="max-width:100%;height:auto;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 6: Intel Image Classification -->
+  <div class="project">
+    <h1 class="project-title">Intel Image Classification</h1>
+    <div class="project-body">
+      <div class="project-content">
+        <p>Executed different ML algorithms for classifying Intel Image dataset, attaining high accuracy rates.</br> Demonstrated expertise in optimizing CNN models which improved accuracy by 12%.</p>
+        <div class="project-description">
+          <p>Tools/Language: Machine Learning, CNN</p>
+          <p>November 2022</p>
+          <a href="https://github.com/shreyasp27" target="_blank" class="viewproject-button">View Project →</a>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="media/photos/project-6.jpg" alt="Intel Image Classification" style="max-width:100%;height:auto;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Project 7: German Housing Market Data Analysis -->
+  <div class="project">
+    <h1 class="project-title">German Housing Market Data Analysis</h1>
+    <div class="project-body">
+      <div class="project-content">
+        <p>Analyzed the cost of homes in Germany through principal component analysis (PCA), regression, and clustering methods.</br> Conceptualized and designed a highly effective model with a random forest learning method to build a recommendation system.</p>
+        <div class="project-description">
+          <p>Tools/Language: PCA, Regression, Clustering, Random Forest</p>
+          <p>May 2022</p>
+          <a href="https://github.com/shreyasp27" target="_blank" class="viewproject-button">View Project →</a>
+        </div>
+      </div>
+      <div class="project-image">
+        <img src="media/photos/project-7.jpg" alt="German Housing Market Data Analysis" style="max-width:100%;height:auto;">
+      </div>
+    </div>
+  </div>
+
+
+ </div>
+
+          <!-- Right Arrow for navigation -->
+          <div class="arrow right" onclick="nextProject()">&#10095;</div>
+        </div>
+      </div>
+
+      <div id='Skills' class="skills-container">
+        <h2 class="skills-title">Skills</h2>
+        <div class="skills-section">
+            <!-- Fundamental Data Science Skills -->
+            <div class="skill-category" onclick="openModal('modal-1')">
+                <div class="skill-content">
+                    <img src="media/logos/ds.png" alt="Fundamental Data Science Skills">
+                    <p>Fundamental Data Science Skills</p>
+                </div>
+            </div>
+            <!-- Advanced ML & AI Techniques -->
+            <div class="skill-category" onclick="openModal('modal-2')">
+                <div class="skill-content">
+                    <img src="media/logos/ml.png" alt="Advanced ML & AI Techniques">
+                    <p>Advanced ML & AI Skills</p>
+                </div>
+            </div>
+            <!-- Programming Languages & Tools -->
+            <div class="skill-category" onclick="openModal('modal-3')">
+                <div class="skill-content">
+                    <img src="media/logos/tf.png" alt="Programming Languages & Tools">
+                    <p>Programming Languages & Tools</p>
+                </div>
+            </div>
+            <!-- Visualization & Cloud Platforms -->
+            <div class="skill-category" onclick="openModal('modal-4')">
+                <div class="skill-content">
+                    <img src="media/logos/tools.png"alt="Visualization & Cloud Platforms">
+                    <p>Visualization & Cloud Platforms</p>
+                </div>
+            </div>
+            <!-- Software & Other Tools -->
+            <div class="skill-category" onclick="openModal('modal-5')">
+                <div class="skill-content">
+                    <img src="media/logos/jira.png" alt="Software & Other Tools">
+                    <p>Software & Other Tools</p>
+                </div>
+            </div>
+            <!-- Soft Skills -->
+            <div class="skill-category" onclick="openModal('modal-6')">
+                <div class="skill-content">
+                    <img src="media/logos/writing.png" alt="Soft Skills">
+                    <p>Soft Skills</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 1 for Fundamental Data Science Skills -->
+<div id="modal-1" class="skill-modal">
+    <div class="modal-content">
+        <h3 class="modal-heading"><i class="fas fa-chart-line"></i>&nbsp; Fundamental Data Science Skills</h3>
+        <ul>
+            <li>Decision trees</li>
+            <li>Random forests</li>
+            <li>Bagging</li>
+            <li>Boosting</li>
+            <li>Ensemble methods</li>
+            <li>Principal component analysis (PCA)</li>
+            <li>Time series analysis</li>
+            <li>Recommender systems</li>
+        </ul>
+        <ul>
+            <li>Statistical analysis</li>
+            <li>Data normalization and standardization</li>
+            <li>Regression analysis (linear, logistic)</li>
+            <li>Supervised and unsupervised methodologies</li>
+            <li>Cross-validation</li>
+            <li>Feature engineering</li>
+            <li>Cluster analysis</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Modal 2 for Advanced ML & AI Techniques -->
+<div id="modal-2" class="skill-modal">
+    <div class="modal-content">
+        <h3 class="modal-heading"><i class="fas fa-brain"></i>&nbsp; Advanced ML & AI Skills</h3>
+        <ul>
+            <li>Generative AI</li>
+            <li>LLMOPs</li>
+            <li>Large Language Models (LLM)</li>
+            <li>Natural Language Processing (NLP)</li>
+        </ul>
+        <ul>
+            <li>Artificial Neural Networks (ANN)</li>
+            <li>Convolutional Neural Networks (CNN)</li>
+            <li>Recurrent Neural Networks (RNN)</li>
+            <li>Generative Adversarial Networks (GANs)</li>
+        </ul>
+        </div>
+</div>
+
+
+<!-- Modal 3 for Programming Languages & Tools -->
+<div id="modal-3" class="skill-modal">
+    <div class="modal-content">
+        <h3 class="modal-heading"><i class="fas fa-database"></i>&nbsp; Programming Languages & Tools</h3>
+        <ul>
+            <li>LangChain</li>
+            <li>R</li>
+            <li>Python</li>
+            <li>MATLAB</li>
+            <li>SPSS</li>
+            <li>R Studio</li>
+            <li>Pandas</li>
+        </ul>
+        <ul>
+            <li>NumPy</li>
+            <li>Scikit-learn</li>
+            <li>OpenCV</li>
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>Keras</li>
+            <li>HuggingFace</li>
+        </ul>
+    </div>
+</div>
+<!-- Modal 4 for Visualization & Cloud Platforms -->
+<div id="modal-4" class="skill-modal">
+    <div class="modal-content">
+        <h3 class="modal-heading"><i class="fas fa-chart-bar"></i>&nbsp; Visualization & Cloud Platforms</h3>
+        <ul>
+            <li>Tableau</li>
+            <li>AWS</li>
+
+        </ul>
+        <ul>
+            <li>Microsoft Azure</li>
+            <li>Google Cloud Platform (GCP)</li>
+        </ul>
+    </div>
+</div>
+<!-- Modal 5 for Software & Other Tools -->
+<div id="modal-5" class="skill-modal">
+    <div class="modal-content">
+        <h3 class="modal-heading"><i class="fas fa-code-branch"></i>&nbsp; Software & Other Tools</h3>
+        <ul>
+            <li>Git</li>
+            <li>Confluence</li>
+            <li>Jira</li>
+            <li>CI/CD</li>
+        </ul>
+        <ul>
+            <li>Jupyter Notebook</li>
+            <li>VS Code</li>
+            <li>Slack</li>
+            <li>Docker</li>
+        </ul>
+    </div>
+</div>
+<!-- Modal 6 for Soft Skills -->
+<div id="modal-6" class="skill-modal">
+    <div class="modal-content">
+        <h3 class="modal-heading"><i class="fas fa-users"></i>&nbsp; Soft Skills</h3>
+        <ul>
+            <li>Leadership</li>
+            <li>Technical Writing</li>
+            <li>Strong Communication</li>
+            <li>Collaboration</li>
+        </ul>
+        <ul>
+            <li>Problem-Solving</li>
+            <li>Critical Thinking</li>
+        </ul>
+    </div>
+</div>
+
+
+<section id="Experience" class="experience-section">
+    <div class="work-experience">
+        <h3>Work Experience</h3>
+
+        <!-- Jewelers Mutual Group -->
+        <div class="work-item">
+            <h4>AI Applications Engineer - Jewelers Mutual Group</h4>
+            <p>Neenah, WI (Remote)</p>
+            <div class="experience-points"> <!-- Using a div to group points -->
+                <p>- Spearheaded the rapid development of four generative AI proof-of-concept (PoC) applications, leveraging LLMs from Azure OpenAI to enhance automation and decision-making workflows.</p>
+                <p>- Engineered both internal and external-facing generative AI tools to optimize business operations, increasing productivity and significantly reducing manual effort across multiple teams.</p>
+                <p>- Developed robust evaluation frameworks to assess the effectiveness and reliability of generative AI applications, implementing benchmarking strategies to ensure consistent performance.</p>
+                <p>- Applied advanced prompt engineering techniques to fine-tune LLM outputs, optimizing accuracy, coherence, and consistency in financial document processing tasks such as extraction, summarization, and analysis.</p>
+                <p>- Integrated AI-driven document processing solutions using LangChain, Python, and cloud-native architectures, streamlining the extraction and analysis of financial data at scale.</p>
+            </div>
+        </div>
+
+        <!-- PeritusHub -->
+        <div class="work-item">
+            <h4>AI Engineer - PeritusHub (Stealth Start-Up)</h4>
+            <p>Austin, TX (Remote)</p>
+            <div class="experience-points">
+                <p>- Conceptualized and implemented a scalable multi-agent system, pioneering an agentic design approach using Langchain and AWS Bedrock to solve complex, multidimensional conversational AI tasks.</p>
+                <p>- Integrated a supervisory mechanism for AI agents to adopt various personas, ensuring the optimal agent is engaged for each task segment.</p>
+                <p>- Designed system prompts for 7+ agents using advanced prompt engineering techniques, ensuring consistent agent response and actions across the system.</p>
+                <p>- Built 6 custom tools for AI agents using Python, adding new functionalities and increasing agents' performance.</p>
+                <p>- Architected the ETL pipeline for the multi-agent system using AWS, ensuring efficient data integration and management to support complex AI functionalities and system scalability.</p>
+                <p>- Constructed and managed the CI/CD pipeline using GitHub Actions, ensuring streamlined deployments and continuous integration of code changes across projects.</p>
+                <p>- Engineered an advanced Document Management System incorporating RAG with OpenAI LLMs for enhanced information retrieval and processing.</p>
+                <p>- Pioneered a Candidate Scoring System leveraging LLMs and AWS Lambda for serverless computing.</p>
+            </div>
+        </div>
+
+        <!-- H-E-B Groceries -->
+        <div class="work-item">
+            <h4>Data Scientist Intern - H-E-B Groceries</h4>
+            <p>San Antonio, TX</p>
+            <div class="experience-points">
+                <p>- Engineered a comprehensive system for extracting product entities and attributes from 80,000 product images.</p>
+                <p>- Utilized Azure OpenAI LLM combined with advanced computer vision techniques for precision and accurate entity extraction.</p>
+                <p>- Achieved heightened attribute detection and extraction capabilities by integrating Paddle OCR and GPT-3.5-Turbo within the LangChain framework, resulting in enhanced performance.</p>
+                <p>- Formulated consistent and clear prompts for LLMs to enhance task comprehension and efficiency.</p>
+                <p>- This innovation boosted product attribute management efficiency and customer engagement by up to 8%.</p>
+                <p>- Crafted a web-based user interface for the extraction system utilizing HTML, JavaScript, and Flask, improving accessibility and ease of use for end users.</p>
+                <p>- Partnered with MLOps and Software Engineering teams to seamlessly integrate the new extraction system into the existing infrastructure, exemplifying strong teamwork and technical coordination skills.</p>
+            </div>
+        </div>
+    </div> <!-- End of work-experience -->
+
+    <div class="volunteering-experience">
+        <h3>Volunteering Experience</h3>
+        <!-- Change The Present Organisation -->
+        <div class="work-item"> <!-- Re-using work-item class for consistency -->
+            <h4>Volunteer AI Engineer Intern - Change The Present Organisation</h4>
+            <p>New York, NY (Remote)</p>
+            <div class="experience-points">
+                <p>- Automated social media content creation for over 1400 gifts using advanced Prompt Engineering with OpenAI's LLMs and Python scripts, enhancing the efficiency and appeal of marketing campaigns.</p>
+            </div>
+        </div>
+    </div> <!-- End of volunteering-experience -->
+
+    <div class="research-experience">
+        <h3>Research Experience</h3>
+        <!-- Research Experience at DePaul University -->
+        <div class="research-item">
+            <h4>MedIX Lab - DePaul University</h4>
+            <p>Chicago, IL</p>
+            <div class="experience-points"> <!-- Using a div to group points -->
+                <p>- Conducted comprehensive literature reviews and comparative analysis of various Generative Adversarial Network (GAN) models, enriching the team's understanding and aiding in identifying optimal techniques for image reconstruction challenges.</p>
+                <p>- Implemented Cycle-GAN, a generative AI CNN model for image reconstruction, leading to improved classification of lung nodules.</p>
+                <p>- Optimised the Cycle-GAN's loss function, resulting in a reduction of the FID score from 4100 to 800 (a low score is better).</p>
+            </div>
+            <a href="media/projects/Implementing Cycle-GAN on Lung Nodule Images to Improve Classification Accuracy.pdf" target="_blank" style="margin-top: 20px;" class="viewproject-button">View Project →</a>
+        </div>
+    </div> <!-- End of research-experience -->
+
+</section>
+
+
+<section id="Education" class="education-section">
+    <h3>Education</h3>
+    <div class="degree-container">
+        <div class="degree">
+            <img src="media/photos/IMG_20230614_010748_855.jpg" alt="First Degree" class="education-image">
+            <h2 style="margin-top: 1em;">Masters in Data Science</h2>
+            <p>DePaul University, 2023</p>
+            <p>Chicago, IL</p>
+        </div>
+        <div class="degree">
+            <img src="media/photos/PES-College-of-Engineering-Mandya-(3).png" alt="Second Degree" class="education-image">
+            <h2 style="margin-top: 1em;">Bachelors in Computer Science</h2>
+            <p>PESCE, 2020</p>
+            <p>Mandya, KA</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="LetsTalk" class="lets-talk-section">
+    <div class="lets-talk-content">
+        <h2>Let's Talk</h2>
+        <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+        <form action="" method="POST" class="contact-form"  data-netlify="true">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<div class="social-links">
+    <a href="mailto:your-shreyas2797@gmail.com" target="_blank" title="Gmail"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/shreyas-puttaraju/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/_shreyasp__" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/shreyasp27" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="media/resume/Shreyas_Puttaraju_Resume.pdf" target="_blank" title="Resume"><i class="fas fa-file-pdf"></i></a>
+</div>
+
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('slide-up');
+            } else {
+                entry.target.classList.remove('slide-up');
+            }
+        });
+    }, {
+        threshold: 0.0 // Adjust this value based on when you want the animation to trigger
+    });
+
+    document.querySelectorAll('.punchline, .title-error, .about-me-content h1, .about-me-content h2, .work-experience, .work-item, .research-item, .research-experience, .education-section, .projects-container , .skills-section, .lets-talk-section, .project-content, .project-title, .project-image  ').forEach(el => observer.observe(el));
+});
+
+
+
+
+
+$(document).ready(function() {
+    var menuItems = $('.menu a'); // Get all the menu items
+
+    // Function to check which section is in view and add the 'active-menu-item' class
+    function makeActive() {
+        // Get current scroll position plus some offset
+        var currentScroll = $(window).scrollTop() + 50; // Adjust the 50px offset as needed
+
+        // Loop through section links
+        menuItems.each(function() {
+            var section = $($(this).attr('href'));
+            var sectionTop = section.offset().top;
+            var sectionHeight = section.outerHeight();
+            if (sectionTop <= currentScroll && (sectionTop + sectionHeight) > currentScroll) {
+                menuItems.removeClass('active-menu-item');
+                $(this).addClass('active-menu-item');
+            }
+        });
+    }
+
+    // Initial call
+    makeActive();
+
+    // Call makeActive function when user scrolls
+    $(window).scroll(function() {
+        makeActive();
+    });
+});
+
+document.addEventListener('scroll', function() {
+    var aboutMeSection = document.getElementById('About-me');
+    var image = aboutMeSection.querySelector('.profile-image');
+
+    var sectionPos = aboutMeSection.getBoundingClientRect().top;
+    var screenPos = window.innerHeight / 2;
+
+    if (sectionPos < screenPos) {
+        // When the section is in the viewport, scale the image
+        image.style.transform = 'scale(1.0)';
+    } else {
+        // When the section is not in the viewport, reset the scale
+        image.style.transform = 'scale(0.8)';
+    }
+});
+
+
+
+
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = 'flex'; // Show the modal
+}
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('skill-modal')) {
+        event.target.style.display = 'none'; // Hide the modal
+    }
+};
+
+document.getElementById("scrollToTopBtn").addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
+
+
+//responsive design
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var navToggle = document.querySelector('.nav-toggle');
+    var navLinks = document.querySelector('.nav-links');
+
+    navToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('active');
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    let ticking = false;
+    const menu = document.querySelector('.menu');
+
+    function syncHorizontalScroll() {
+        const totalScrollHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollY = window.scrollY;
+        const maxScrollLeft = menu.scrollWidth - menu.clientWidth;
+
+        const scrollX = (scrollY / totalScrollHeight) * maxScrollLeft;
+        menu.scrollLeft = scrollX;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                syncHorizontalScroll();
+                ticking = false;
+            });
+
+            ticking = true;
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var mouseTimeout;
+    var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // Initially hide the button
+    scrollToTopBtn.style.display = 'none';
+
+    // Function to show the button
+    function showScrollToTopButton() {
+        scrollToTopBtn.style.display = 'block'; // Show the button
+        // Clear any existing timeout
+        clearTimeout(mouseTimeout);
+        // Set a new timeout to hide the button after 3 seconds
+        mouseTimeout = setTimeout(function() {
+            scrollToTopBtn.style.display = 'none';
+        }, 5000); // 3000 milliseconds = 3 seconds
+    }
+
+    // Event listener for mouse movement
+    document.addEventListener('mousemove', function() {
+        showScrollToTopButton();
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  let currentProject = 0;
+  const projects = document.querySelectorAll('.project');
+  const totalProjects = projects.length;
+
+  function showProject(index) {
+    projects.forEach((project, idx) => {
+      project.style.display = idx === index ? 'block' : 'none';
+    });
+  }
+
+  document.querySelector('.arrow.left').addEventListener('click', () => {
+    if (currentProject > 0) {
+      currentProject -= 1;
+    } else {
+      // If we are at the first project, go to the last project
+      currentProject = totalProjects - 1;
+    }
+    showProject(currentProject);
+  });
+
+  document.querySelector('.arrow.right').addEventListener('click', () => {
+    if (currentProject < totalProjects - 1) {
+      currentProject += 1;
+    } else {
+      // If we are at the last project, go back to the first project
+      currentProject = 0;
+    }
+    showProject(currentProject);
+  });
+
+  showProject(currentProject); // Initialize the view
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    var preloader = document.getElementById('preloader');
+    var loadingBar = document.getElementById('loadingBar');
+
+    var totalMedia = document.images.length + document.getElementsByTagName('video').length;
+    var loadedMedia = 0;
+
+    // Function to update the loading bar
+    function updateLoadingBar() {
+        var percentage = (loadedMedia / totalMedia) * 100;
+        loadingBar.style.width = percentage + '%';
+
+        if(loadedMedia == totalMedia) {
+            preloader.style.display = 'none';
+        }
+    }
+
+    // Track image loading
+    Array.from(document.images).forEach(img => {
+        var imgClone = new Image();
+        imgClone.onload = imgClone.onerror = function() {
+            loadedMedia++;
+            updateLoadingBar();
+        };
+        imgClone.src = img.src;
+    });
+
+    // Track video loading
+    Array.from(document.getElementsByTagName('video')).forEach(video => {
+        video.onloadeddata = function() {
+            loadedMedia++;
+            updateLoadingBar();
+        };
+    });
+
+    // In case there are no images or videos
+    if(totalMedia === 0) {
+        preloader.style.display = 'none';
+    }
+});
+
+function adjustLayout() {
+    // Adjust Footer Height
+    var menuHeight = document.querySelector('.menu').offsetHeight + (window.innerHeight * 0.04);
+    var footer = document.querySelector('.footer');
+    if (footer) {
+        footer.style.setProperty('--footer-height', menuHeight + 'px');
+    }
+
+    // Adjust Section Padding
+    var bannerHeight = document.querySelector('.banner').offsetHeight + (window.innerHeight * 0.025);
+    var sectionIds = ['#About-me', '#Experience', '#Education', '#Projects', '#Skills', '#LetsTalk'];
+    sectionIds.forEach(function(id) {
+        var section = document.querySelector(id);
+        if (section) {
+            section.style.paddingTop = bannerHeight + 'px';
+        }
+    });
+}
+
+// Run the function on load and on resize
+window.onload = adjustLayout;
+window.onresize = adjustLayout;
+
+const titles = document.querySelectorAll('.title-slider h2');
+let current = 0;
+
+function changeTitle() {
+    // Set the next index
+    const next = (current + 1) % titles.length;
+
+    // Add 'upcoming' to the next title to prepare it to slide in
+    titles[next].classList.add('upcoming');
+
+    // Transition the current title to 'exiting'
+    titles[current].classList.remove('active');
+    titles[current].classList.add('exiting');
+
+    // After a delay, switch classes to make the next title 'active' and reset the current
+    setTimeout(() => {
+        titles[current].classList.remove('exiting');
+        titles[next].classList.remove('upcoming');
+        titles[next].classList.add('active');
+
+        // Update the current index to the next
+        current = next;
+    }, 500); // This delay should match the transition time in CSS
+
+    // Set a timeout to continuously change titles
+    setTimeout(changeTitle, 3000); // Change title every 3 seconds
+}
+
+// Initialize the first title
+titles[current].classList.add('active');
+
+// Start the title change process
+setTimeout(changeTitle, 3000);
+
+
+
+    </script>
+
+</body>
+</html>
